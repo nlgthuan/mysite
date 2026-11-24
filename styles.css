@@ -7,11 +7,14 @@ h1 {
   margin-bottom:2rem;
 }
 
-#self-sticker {
+#sticker-container {
   position: absolute;
-  transform: rotate(20deg);
   top: 0;
   right: calc(100svw - min(760px, 100svw) + 20px);
+}
+
+#self-sticker {
+  transform: rotate(20deg);
   width: 110px;
   transition: transform .5s ease-in-out;
   cursor: pointer;
@@ -19,6 +22,31 @@ h1 {
 
 #self-sticker:hover {
   transform: rotate(-20deg);
+}
+
+#hallo {
+  position: absolute;
+  top: -30px;
+  left: 10px;
+  transform: rotate(-10deg);
+}
+
+.fly-in {
+  animation: fly-in 0.8s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.fly-out {
+  animation: fly-out 0.8s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes fly-in {
+  from {top: -30px}
+  to {top: 30px}
+}
+
+@keyframes fly-out {
+  from {top: 30px}
+  to {top: -30px}
 }
 
 marquee {

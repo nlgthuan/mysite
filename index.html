@@ -7,13 +7,15 @@
     <title>Thuan Ngo's Home Page</title>
     <link rel="icon" type="image/x-icon" href="name.png">
     <link rel="stylesheet" href="styles.css">
-
 </head>
 
 <body>
     <h1> Thuan Ngo's Site </h1>
     <p> Hey! Glad you found this site 😉</p>
-    <img id="self-sticker" src="/self-sticker.png" alt="self-sticker">
+    <div id="sticker-container">
+        <img id="self-sticker" src="/self-sticker.png" alt="self-sticker">
+        <img id="hallo" src="/hallo.png" alt="hallo" height="32">
+    </div>
     <p>
         I am a fullstack software engineer with 5 YOE, based in Passau, Germany.
     </p>
@@ -37,7 +39,7 @@
         </li>
     </ul>
     <p>
-        These links are indented to be broken at the moment. List them here so that I'll be less procrastinated and hopefully update them soon.
+        These links are intended to be broken at the moment. List them here so that I'll be less procrastinated and hopefully update them soon.
     </p>
     <ul>
         <li><a href="#">Photography</a></li>
@@ -60,6 +62,19 @@
         <hr>
         &copy; Thuan Ngo 2026 | Plain HTML | No Tracking | None of S_m A__man's RAM was used during the making of this site!
     </footer>
+
+    <script>
+        const stickerContainer = document.getElementById("sticker-container");
+        const hallo = document.getElementById("hallo");
+        stickerContainer.addEventListener("mouseover", () => {
+            hallo.classList.add("fly-in");
+            hallo.classList.remove("fly-out");
+        });
+        stickerContainer.addEventListener("mouseleave", () => {
+            hallo.classList.remove("fly-in");
+            hallo.classList.add("fly-out");
+        })
+    </script>
 </body>
 
 </html>
